@@ -2,6 +2,8 @@
 
 ## Ejercicio inicial para dar Objetos
 
+[![build](https://github.com/pdep-utn/eg-inicial-wollok/actions/workflows/ci.yml/badge.svg)](https://github.com/pdep-utn/eg-inicial-wollok/actions/workflows/ci.yml)
+
 ### Primera parte: qué te puedo cobrar
 
 - La materia la representamos como un String
