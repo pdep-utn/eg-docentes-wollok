@@ -1,0 +1,64 @@
+import docentes.*
+
+describe "test de nico" {
+	test "costo por dar clase depende de la materia" {
+		// assert
+		assert.equals(400, nico.cuantoCobra("historia"))
+	}
+	
+	test "alumne que le cae bien" {
+		// assert
+		const alumnoQueEstudiaFisica = lucas
+		assert.that(nico.leCaeBien(alumnoQueEstudiaFisica))
+	}
+	
+	test "alumne que no le cae bien" {
+		// arrange
+		const alumneQueNoEstudiaFisica = object {
+			method estudia(unaMateria) = false
+		}
+		// assert
+		assert.notThat(nico.leCaeBien(alumneQueNoEstudiaFisica))
+	}
+}
+
+describe "test de camila" {
+	test "costo de clase con camila de mal humor" {
+		// act
+		camila.encularse()
+		// assert		
+		assert.equals(700, camila.cuantoCobra("historia"))
+	}
+
+	test "costo de clase con camila de buen humor" {
+		// assert		
+		assert.equals(250, camila.cuantoCobra("historia"))
+	}
+
+	test "un alumno que estudia pocas materias no le cae bien" {
+		// assert -> qué representa Lucas
+		const alumnoQueEstudiaPocasMaterias = lucas
+		assert.notThat(camila.leCaeBien(alumnoQueEstudiaPocasMaterias))
+	}
+
+	test "un alumno que estudia muchas materias le cae bien" {
+		// act
+		const alumnoQueEstudiaMuchasMaterias = lucas
+		alumnoQueEstudiaMuchasMaterias.estudia("literatura")
+		// assert
+		assert.notThat(camila.leCaeBien(alumnoQueEstudiaMuchasMaterias))
+	}
+
+}
+
+describe "test de carlono" {
+	test "costo de clase es fijo" {
+		// assert		
+		assert.equals(300, carlono.cuantoCobra("historia"))
+	}
+
+	test "le cae bien todo el mundo" {
+		// assert		
+		assert.that(carlono.leCaeBien(lucas))
+	}
+}
