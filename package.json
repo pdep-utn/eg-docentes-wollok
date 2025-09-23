@@ -1,7 +1,7 @@
 {
   "name": "eg-inicial-wollok",
   "version": "1.0.0",
-  "wollokVersion": "4.0.0",
+  "wollokVersion": "4.2.3",
   "author": "dodain",
   "license": "ISC"
 }
