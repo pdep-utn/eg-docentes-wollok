@@ -54,7 +54,7 @@ object lucas {
 
 	method materiasQueEstudia() = materiasQueEstudia
 
-	method agregarMateriaQeuEstudia(materia) {
+	method agregarMateriaQueEstudia(materia) {
 		materiasQueEstudia.add(materia)
 	}
 
